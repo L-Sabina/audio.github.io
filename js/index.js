@@ -23,7 +23,7 @@ const run = async () => {
       recorder = null;
     }
   } else {
-    const response = await fetch('https://l-sabina.github.io/audio.github.io'); // get temp session token from server.js (backend)
+    const response = await fetch('https://audio-lgnn.onrender.com'); // get temp session token from server.js (backend)
     console.log(response)
     const data = await response.json();
     console.log(data)
