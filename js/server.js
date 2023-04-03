@@ -2,6 +2,8 @@ const express = require('express');
 const axios = require('axios');
 const cors = require('cors');
 
+const PORT = process.env.PORT || 3030;
+
 const app = express();
 app.use(express.json());
 app.use(cors());
@@ -19,7 +21,6 @@ app.get('/', async (req, res) => {
   }
 });
 
-app.set('port', 443);
-const server = app.listen(app.get('port'), () => {
-  console.log(`Server is running on port ${server.address().port}`);
+const server = app.listen(PORT, () => {
+  console.log(`server started on port ${PORT}`);
 });
