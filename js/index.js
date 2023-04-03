@@ -11,7 +11,6 @@ let recorder;
 
 // runs real-time transcription and handles global variables
 const run = async () => {
-  console.log('1')
   if (isRecording) { 
     if (socket) {
       socket.send(JSON.stringify({terminate_session: true}));
